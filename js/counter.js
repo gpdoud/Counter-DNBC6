@@ -16,10 +16,9 @@ function increment() {
 }
 
 function display() {
-    document.getElementById("theNbr").value = nbr;
-    if(nbr == 0) {
-        document.getElementById("theNbr").style.fontSize = "3em";
-    } else {
-        document.getElementById("theNbr").style.fontSize = "1em";
-    }
+    var ctrl = document.getElementById("theNbr")
+    ctrl.value = nbr;
+    ctrl.style.fontWeight = nbr % 2 == 0 ? "bold" : "normal";
+    ctrl.style.fontStyle = nbr % 3 == 0 ? "italic" : "normal";
+    ctrl.style.color = nbr % 7 == 0 ? "red" : "black";
 }
